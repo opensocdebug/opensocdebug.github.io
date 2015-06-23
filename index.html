@@ -1,0 +1,56 @@
+---
+layout: base
+---
+<div class="wrapper">
+    <header>
+        {% if site.compass.logo %}
+        <div class="logo-container">
+          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
+        </div>
+        {% endif %}
+
+        {% if site.compass.author %}
+        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
+        {% endif %}
+
+        {% if site.compass.tagline %}
+        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
+        {% endif %}
+    </header>
+    <main>
+      <h2>About Open SoC Debug</h2>
+      <p>Open SoC Debug is a new project co-managed by
+      the <a href="http://www.optimsoc.org">OpTiMSoC</a>
+      and <a href="http://www.lowrisc.org">lowRISC</a> projects with
+      the mission to establish a repository of common SoC debug
+      components. While our original focus is on hardware building
+      blocks and their interface on the debug host, we highly welcome
+      debug software developers to broaden the scope of Open SoC
+      Debug.</p>
+      
+      <h2>Goals</h2>
+      <ul>
+	<li>Specification of a unified infrastructure for SoC
+	run-control and trace debugging</li>
+	<li>Provide a collection of generic hardware debug
+	components</li>
+	<li>Integrate the host interface and host-target transfer
+	hardware</li>
+      </ul>
+
+      <p>We are still at early phases of Open SoC Debug. Please feel
+      free to <a href="mailto:stefan@wallentowitz.de">contact us</a>
+      if you are interested in the project or want to participate.</p>
+
+      <hr />
+
+      <ul class="fa-ul main-list">
+	<li class="main-list-item">
+	  <span class="fa fa-github fa-lg main-list-item-icon"></span>
+	  <a href="https://github.com/opensocdebug">GitHub Organization</a>
+	</li>
+      </ul>
+
+      <p>Based on the <a href="http://excentris.net/compass/">Compass theme</a> by <a href="http://excentris.net/">Eduardo Rubio</a>.
+    </main>
+</div>
