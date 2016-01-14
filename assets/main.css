@@ -10,12 +10,12 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-	color: #888888;
-	text-decoration: none;
+    color: #888888;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .github-org {
@@ -26,6 +26,7 @@ a:hover {
 
 .logo-container {
     text-align: right;
+    margin-right: 3em;
 }
 
 .logo {
@@ -39,12 +40,14 @@ a:hover {
     font-size: 2.8em;
     margin-top: 0;
     margin-bottom: 0;
-    text-align: right;
 }
 
 .osd-tagline p {
     font-size: 1.3em;
-    text-align: right;
     margin-bottom: 2em;
 }
 
+.news {
+    margin-left: 0.5em;
+    display: block;
+}

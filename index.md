@@ -6,14 +6,13 @@ layout: base
     <div class="col-md-6">
       <div class="logo-container">
         <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}/images/logo.png')"></a>
-      </div>
-
-      <div class="osd-title"><h1>Open SoC Debug</h1></div>
+	<div class="osd-title"><h1>Open SoC Debug</h1></div>
       
-      <div class="osd-tagline"><p>Building blocks for your SoC debug infrastructure</p></div>
+	<div class="osd-tagline"><p>Building blocks for your SoC debug infrastructure</p></div>
+      </div>
     </div>
     <div class="col-md-6">
-      <h2>About Open SoC Debug</h2>
+      <h2>About</h2>
       <p>Open SoC Debug is a new project co-managed by
       the <a href="http://www.optimsoc.org">OpTiMSoC</a>
       and <a href="http://www.lowrisc.org">lowRISC</a> projects with
@@ -28,18 +27,21 @@ layout: base
     <div class="col-md-6">
       <h2>News</h2>
       <ul class="fa-ul">
-	<li><i class="fa-li fa fa-github fa-lg"></i><i>(2016.01.13)</i> We
-	have started intensifying the specification of the interfaces
-	and components. To follow it or contribute visit
-	the <a href="https://github.com/opensocdebug/documentation">documentation</a>
-	and <a href="https://github.com/opensocdebug/hardware">modules</a>
-	repository.</li>
-	<li><i class="fa-li glyphicon
-	glyphicon-blackboard fa-lg"></i><i>(2015.11.12)</i> We have assembled
-	the basic ideas and components of Open SoC Debug in
-	an <a href="http://opensocdebug.org/slides/2015-11-12-overview/">Overview
-	Presentation</a></li>
-<!--	<li><i class="fa-li fa fa-file"></i>New Document</li>-->
+	{% for post in site.posts %}
+	<li>
+	  {% if post.type == "slideshow" %}
+	  <i class="fa-li fa fa-desktop"></i>
+	  {% else if post.type == "project" %}
+	  <i class="fa-li fa fa-github fa-lg"></i>
+	  {% else if post.type == "document" %}
+	  <i class="fa-li fa fa-file-text-o fa-lg"></i>
+	  {% else if post.type == "event" %}
+	  <i class="fa-li fa fa-calendar fa-lg"></i>
+	  {% endif %}
+	  <span class="news"><i>({{post.date | date: "%F"}})</i>
+	  {{post.excerpt | remove: '<p>' | remove: '</p>'}}</span>
+	</li>
+	{% endfor %}
       </ul>
     </div>
     <div class="col-md-6">
