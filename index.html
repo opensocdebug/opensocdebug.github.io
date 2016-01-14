@@ -1,23 +1,18 @@
 ---
 layout: base
 ---
-<div class="wrapper">
-    <header>
-        {% if site.compass.logo %}
-        <div class="logo-container">
-          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
-        </div>
-        {% endif %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="logo-container">
+        <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}/images/logo.png')"></a>
+      </div>
 
-        {% if site.compass.author %}
-        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
-        {% endif %}
-
-        {% if site.compass.tagline %}
-        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
-        {% endif %}
-    </header>
-    <main>
+      <div class="osd-title"><h1>Open SoC Debug</h1></div>
+      
+      <div class="osd-tagline"><p>Building blocks for your SoC debug infrastructure</p></div>
+    </div>
+    <div class="col-md-6">
       <h2>About Open SoC Debug</h2>
       <p>Open SoC Debug is a new project co-managed by
       the <a href="http://www.optimsoc.org">OpTiMSoC</a>
@@ -27,7 +22,27 @@ layout: base
       blocks and their interface on the debug host, we highly welcome
       debug software developers to broaden the scope of Open SoC
       Debug.</p>
-      
+    </div>
+</div>
+<div class="row">      
+    <div class="col-md-6">
+      <h2>News</h2>
+      <ul class="fa-ul">
+	<li><i class="fa-li fa fa-github fa-lg"></i><i>(2016.01.13)</i> We
+	have started intensifying the specification of the interfaces
+	and components. To follow it or contribute visit
+	the <a href="https://github.com/opensocdebug/documentation">documentation</a>
+	and <a href="https://github.com/opensocdebug/hardware">modules</a>
+	repository.</li>
+	<li><i class="fa-li glyphicon
+	glyphicon-blackboard fa-lg"></i><i>(2015.11.12)</i> We have assembled
+	the basic ideas and components of Open SoC Debug in
+	an <a href="http://opensocdebug.org/slides/2015-11-12-overview/">Overview
+	Presentation</a></li>
+<!--	<li><i class="fa-li fa fa-file"></i>New Document</li>-->
+      </ul>
+    </div>
+    <div class="col-md-6">
       <h2>Goals</h2>
       <ul>
 	<li>Specification of a unified infrastructure for SoC
@@ -45,20 +60,19 @@ layout: base
 
       <form class="form-inline center-block" action="https://lists.fossi-foundation.org/mailman/subscribe/opensocdebug" method="post">
 	<input type="text" class="form-control" name="email" placeholder="name@example.org" />
-	<button class="btn btn-default" type="submit">
+	<button class="btn btn-primary fa fa-envelope" type="submit">
 	  subscribe
 	</button>
       </form>
 
       <hr />
 
-      <ul class="fa-ul main-list">
-	<li class="main-list-item">
-	  <span class="fa fa-github fa-lg main-list-item-icon"></span>
-	  <a href="https://github.com/opensocdebug">GitHub Organization</a>
+      <ul class="fa-ul">
+	<li class="github-org">
+	  <span class="fa fa-github fa-lg"></span>
+	  <a href="https://github.com/opensocdebug">Visit our GitHub Organization</a>
 	</li>
       </ul>
-
-      <p>Based on the <a href="http://excentris.net/compass/">Compass theme</a> by <a href="http://excentris.net/">Eduardo Rubio</a>.
-    </main>
+    </div>
+</div>
 </div>
