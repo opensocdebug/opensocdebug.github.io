@@ -2,7 +2,7 @@
 layout: base
 ---
 <div class="container">
-  <div class="row">
+  <div class="row headrow">
     <div class="col-md-6">
       <div class="logo-container">
         <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}/images/logo.png')"></a>
@@ -11,7 +11,7 @@ layout: base
 	<div class="osd-tagline"><p>Building blocks for your SoC debug infrastructure</p></div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 rightspan">
       <h2>About</h2>
       <p>Open SoC Debug is a new project co-managed by
       the <a href="http://www.optimsoc.org">OpTiMSoC</a>
