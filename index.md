@@ -58,7 +58,7 @@ layout: base
       <p>We are still at early phases of Open SoC Debug. Please feel
       free to <a href="mailto:stefan@wallentowitz.de">contact us</a>
       if you are interested in the project or want to participate or
-      join our mailing list:</p>
+      join our <a href="https://lists.fossi-foundation.org/listinfo/opensocdebug">mailing list</a>:</p>
 
       <form class="form-inline center-block" action="https://lists.fossi-foundation.org/mailman/subscribe/opensocdebug" method="post">
 	<input type="text" class="form-control" name="email" placeholder="name@example.org" />
