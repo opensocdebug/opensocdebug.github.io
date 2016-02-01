@@ -31,11 +31,11 @@ layout: base
 	<li>
 	  {% if post.type == "slideshow" %}
 	  <i class="fa-li fa fa-desktop"></i>
-	  {% else if post.type == "project" %}
+	  {% elsif post.type == "project" %}
 	  <i class="fa-li fa fa-github fa-lg"></i>
-	  {% else if post.type == "document" %}
+	  {% elsif post.type == "document" %}
 	  <i class="fa-li fa fa-file-text-o fa-lg"></i>
-	  {% else if post.type == "event" %}
+	  {% elsif post.type == "event" %}
 	  <i class="fa-li fa fa-calendar fa-lg"></i>
 	  {% endif %}
 	  <span class="news"><i>({{post.date | date: "%F"}})</i>
