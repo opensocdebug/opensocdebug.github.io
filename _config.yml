@@ -6,4 +6,28 @@ markdown: kramdown
 highlighter: pygments
 
 # Permalinks
-permalink: pretty
+permalink: /blog/:year/:month/:day/:title/
+
+# some defaults (avoid adding frontmatter to all files)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# blog authors
+authors:
+  philipp:
+    display_name: Philipp Wagner
+    picture: /img/people/philipp.jpg
+  stefan:
+    display_name: Stefan Wallentowitz
+    picture: /img/people/stefan.jpg

@@ -1,7 +1,9 @@
+/* general styling */
 body {
-    margin: 5% auto 0px;
+    padding-top: 50px;
     font-family: 'Vollkorn', serif;
     font-size: 16px;
+    line-height: normal;
     color: #444444;
     background-color: #FFFFFF;
 }
@@ -10,7 +12,6 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-    color: #888888;
     text-decoration: none;
 }
 
@@ -18,8 +19,67 @@ a:hover {
     text-decoration: underline;
 }
 
+h1, h2, h3 {
+  color: #2ca089;
+}
+
+h1 a, h2 a, h3 a {
+  color: #2ca089;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover {
+  text-decoration: none;
+  color: #2ca089;
+}
+
+figure {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+figure > * {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+figcaption {
+  margin-top: 1.5em;
+  font-size: 90%;
+  text-align: center;
+}
+
+/* footer */
+footer {
+  color: rgba(77, 77, 77, 0.75);
+  font-weight: 300;
+  text-align: center;
+}
+
+/* main navigation bar (top) */
+.navbar {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #cccccc;
+  box-shadow: 0 0 3px rgba(153, 153, 153, 0.75);
+}
+
+.navbar a {
+  color: #444444;
+}
+
+.navbar-brand {
+    background: url("/images/logo_header.png") no-repeat scroll left center transparent;
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 0;
+    padding-left: 55px;
+}
+
+
+/* homepage */
 .headrow {
     font-size: 0;
+    margin-top: 30px;
 }
 .headrow > * {
     float: none;
@@ -62,4 +122,90 @@ a:hover {
 .news {
     margin-left: 0.5em;
     display: block;
+}
+
+/* DOCUMENTATION */
+/* fix jump positioning */
+.osd-doc-container h1,
+.osd-doc-container h2,
+.osd-doc-container h3,
+.osd-doc-container h4,
+.osd-doc-container h5,
+.osd-doc-container h6 {
+  /* ensure that the jump targets don't end up behind the main navigation bar */
+  padding-top: 80px;
+  margin-top: -60px; /* real space before heading is 20 px (- 50 + 20)*/
+}
+
+/* documentation overview page */
+.osd-doc-overview .book {
+  border: 1px solid #2ca089;
+  background-color: #ecf7f4;
+  box-shadow: 0 0 3px rgba(153, 153, 153, 0.75);
+  padding: 10px;
+  margin-right:15px;
+  padding-top: 0;
+}
+
+.book h3::before {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  content: "\e043"; /* glyphicon-book */
+  padding-right:5px;
+}
+
+/* documentation navbar */
+/* configure bootstrap affix: fixed navbar */
+.osd-docnav.affix {
+    position: static;
+}
+.osd-docnav.affix-top {
+    top: 50px;
+}
+@media screen and (min-width: 992px) {
+  .osd-docnav.affix-bottom, .osd-docnav.affix {
+      width: 213px;
+  }
+  .osd-docnav.affix {
+      position: fixed;
+      top: 80px;
+  }
+  .osd-docnav.affix-bottom {
+      position: absolute;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .osd-docnav.affix-bottom, .osd-docnav.affix {
+      width: 262.5px;
+  }
+}
+
+.osd-docnav-nav a {
+  color: #444444;
+}
+.osd-docnav-nav ul {
+  list-style: none;
+  padding-left: 15px;
+}
+.osd-docnav-nav > ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* hide all subsections except for the current section */
+.osd-docnav-nav > ul > li:not(.active) > ul > li {
+  display: none;
+}
+
+.osd-docnav li.active > a {
+  color: #2ca089;
+}
+
+h1.osd-doc-header {
+  margin-bottom: 10px;
 }

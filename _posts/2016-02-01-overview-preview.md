@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Overview 2016.1 Preview 1
 type: document
+author: stefan
 ---
 
 We have put up a

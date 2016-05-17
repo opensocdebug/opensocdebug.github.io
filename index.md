@@ -1,80 +1,78 @@
 ---
-layout: base
+title: "Open SoC Debug"
 ---
-<div class="container">
-  <div class="row headrow">
-    <div class="col-md-6">
-      <div class="logo-container">
-        <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}/images/logo.png')"></a>
-	<div class="osd-title"><h1>Open SoC Debug</h1></div>
-      
-	<div class="osd-tagline"><p>Building blocks for your SoC debug infrastructure</p></div>
-      </div>
+<div class="row headrow">
+  <div class="col-md-6">
+    <div class="logo-container">
+      <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}/images/logo.png')"></a>
+      <div class="osd-title"><h1>Open SoC Debug</h1></div>
+      <div class="osd-tagline"><p>Building blocks for your SoC debug infrastructure</p></div>
     </div>
-    <div class="col-md-6 rightspan">
-      <h2>About</h2>
-      <p>Open SoC Debug is a new project co-managed by
-      the <a href="http://www.optimsoc.org">OpTiMSoC</a>
-      and <a href="http://www.lowrisc.org">lowRISC</a> projects with
-      the mission to establish a repository of common SoC debug
-      components. While our original focus is on hardware building
-      blocks and their interface on the debug host, we highly welcome
-      debug software developers to broaden the scope of Open SoC
-      Debug.</p>
-    </div>
+  </div>
+  <div class="col-md-6 rightspan">
+    <h2>About</h2>
+    <p>Open SoC Debug is a new project co-managed by
+    the <a href="http://www.optimsoc.org">OpTiMSoC</a>
+    and <a href="http://www.lowrisc.org">lowRISC</a> projects with
+    the mission to establish a repository of common SoC debug
+    components. While our original focus is on hardware building
+    blocks and their interface on the debug host, we highly welcome
+    debug software developers to broaden the scope of Open SoC
+    Debug.</p>
+  </div>
 </div>
+
 <div class="row">      
-    <div class="col-md-6">
-      <h2>News</h2>
-      <ul class="fa-ul">
-	{% for post in site.posts %}
-	<li>
-	  {% if post.type == "slideshow" %}
-	  <i class="fa-li fa fa-desktop"></i>
-	  {% elsif post.type == "project" %}
-	  <i class="fa-li fa fa-github fa-lg"></i>
-	  {% elsif post.type == "document" %}
-	  <i class="fa-li fa fa-file-text-o fa-lg"></i>
-	  {% elsif post.type == "event" %}
-	  <i class="fa-li fa fa-calendar fa-lg"></i>
-	  {% endif %}
-	  <span class="news"><i>({{post.date | date: "%F"}})</i>
-	  {{post.excerpt | remove: '<p>' | remove: '</p>'}}</span>
-	</li>
-	{% endfor %}
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h2>Goals</h2>
-      <ul>
-	<li>Specification of a unified infrastructure for SoC
-	run-control and trace debugging</li>
-	<li>Provide a collection of generic hardware debug
-	components</li>
-	<li>Integrate the host interface and host-target transfer
-	hardware</li>
-      </ul>
+  <div class="col-md-6">
+    <h2>News</h2>
+    <ul class="fa-ul">
+    	{% for post in site.posts %}
+    	<li>
+    	  {% if post.type == "slideshow" %}
+    	  <i class="fa-li fa fa-desktop"></i>
+    	  {% elsif post.type == "project" %}
+    	  <i class="fa-li fa fa-github fa-lg"></i>
+    	  {% elsif post.type == "document" %}
+    	  <i class="fa-li fa fa-file-text-o fa-lg"></i>
+    	  {% elsif post.type == "event" %}
+    	  <i class="fa-li fa fa-calendar fa-lg"></i>
+    	  {% endif %}
+    	  <span class="news"><i>({{post.date | date: "%F"}})</i>
+    	  {{post.excerpt | remove: '<p>' | remove: '</p>'}}</span>
+    	</li>
+    	{% endfor %}
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <h2>Goals</h2>
+    <ul>
+    	<li>Specification of a unified infrastructure for SoC
+    	run-control and trace debugging</li>
+    	<li>Provide a collection of generic hardware debug
+    	components</li>
+    	<li>Integrate the host interface and host-target transfer
+    	hardware</li>
+    </ul>
 
-      <p>We are still at early phases of Open SoC Debug. Please feel
-      free to <a href="mailto:stefan@wallentowitz.de">contact us</a>
-      if you are interested in the project or want to participate or
-      join our <a href="https://lists.librecores.org/listinfo/opensocdebug">mailing list</a>:</p>
+    <p>We are still at early phases of Open SoC Debug. Please feel
+    free to <a href="mailto:stefan@wallentowitz.de">contact us</a>
+    if you are interested in the project or want to participate or
+    join our <a href="https://lists.librecores.org/listinfo/opensocdebug">mailing list</a>:</p>
 
-      <form class="form-inline center-block" action="https://lists.librecores.org/mailman/subscribe/opensocdebug" method="post">
-	<input type="text" class="form-control" name="email" placeholder="name@example.org" />
-	<button class="btn btn-primary fa fa-envelope" type="submit">
-	  subscribe
-	</button>
-      </form>
+    <form class="form-inline center-block" action="https://lists.librecores.org/mailman/subscribe/opensocdebug" method="post">
+    	<input type="text" class="form-control" name="email" placeholder="name@example.org" />
+    	<button class="btn btn-primary fa fa-envelope" type="submit">
+    	  subscribe
+    	</button>
+    </form>
 
-      <hr />
+    <hr />
 
-      <ul class="fa-ul">
-	<li class="github-org">
-	  <span class="fa fa-github fa-lg"></span>
-	  <a href="https://github.com/opensocdebug">Visit our GitHub Organization</a>
-	</li>
-      </ul>
-    </div>
-</div>
+    <ul class="fa-ul">
+    	<li class="github-org">
+    	  <span class="fa fa-github fa-lg"></span>
+    	  <a href="https://github.com/opensocdebug">Visit our GitHub Organization</a>
+    	</li>
+    </ul>
+  </div>
 </div>

@@ -1,0 +1,24 @@
+---
+title: "$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$"
+---
+
+<div class="osd-doc-container">
+  <h1 class="osd-doc-header">{{ page.title }}</h1>
+  <hr/>
+
+  <!-- document navigation sidebar -->
+  $if(toc)$
+  <div class="col-md-3">
+    <div data-spy="affix" data-offset-top="50" id="osd-docnav" class="osd-docnav">
+      <nav class="osd-docnav-nav nav hidden-print" role="complementary">
+        $toc$
+      </nav>
+    </div>
+  </div>
+  $endif$
+
+  <!-- document content -->
+  <div class="col-md-9">
+    $body$
+  </div>
+</div>

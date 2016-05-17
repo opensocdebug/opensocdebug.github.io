@@ -1,0 +1,6 @@
+# Jekyll output
+/_site
+
+# Ruby and bundler
+/.ruby-version
+/Gemfile.lock
