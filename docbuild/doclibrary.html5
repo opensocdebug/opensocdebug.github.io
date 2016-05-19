@@ -7,15 +7,30 @@ title: "$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$"
   <hr/>
 
   <!-- document navigation sidebar -->
-  $if(toc)$
   <div class="col-md-3">
     <div data-spy="affix" data-offset-top="50" id="osd-docnav" class="osd-docnav">
+      $if(toc)$
       <nav class="osd-docnav-nav nav hidden-print" role="complementary">
         $toc$
       </nav>
+      $endif$
+
+      <div class="osd-doc-sidebar-notes">
+        <p>
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <a href="$shortname$.pdf">PDF version</a> (good for offline reading and printing)
+        </p>
+
+        <p>
+          Found an error? <a href="/getinvolved">Contact us</a> or contribute to
+          this document directly on <a href="$gitrepo$">GitHub</a>!
+        </p>
+
+        <p>
+          This document was generated from source revision $gitrevision$ on $date$.
+        </p>
+      </div>
     </div>
   </div>
-  $endif$
 
   <!-- document content -->
   <div class="col-md-9">

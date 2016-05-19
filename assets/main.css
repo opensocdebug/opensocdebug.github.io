@@ -209,3 +209,8 @@ footer {
 h1.osd-doc-header {
   margin-bottom: 10px;
 }
+
+.osd-doc-sidebar-notes {
+  margin-top: 25px;
+  font-size: 90%;
+}

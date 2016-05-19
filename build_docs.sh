@@ -17,7 +17,9 @@ BUILDTMP=$(mktemp -d)
 if [ ! -d "$OSD_DOCS_LOCAL" ]; then
     git clone $OSD_DOCS_REPO_URL "$BUILDTMP/osd-documentation"
     ( cd "$BUILDTMP/osd-documentation"; git checkout $OSD_DOCS_BRANCH )
+    OSD_DOCS_REPO_REVISION=$(cd $BUILDTMP/osd-documentation; git rev-parse --short HEAD)
 else
+    OSD_DOCS_REPO_REVISION=$(cd $OSD_DOCS_LOCAL; git rev-parse --short HEAD)
     cp -r $OSD_DOCS_LOCAL $BUILDTMP/osd-documentation
 fi
 
@@ -32,24 +34,30 @@ cp $DIR/docbuild/doclibrary.html5 $BUILDTMP/templates/doclibrary.html5
 DOCS_OUTDIR=$DIR/docs
 
 # Overview
+cat << EOF > $BUILDTMP/docprops.yaml
+---
+gitrevision: '$OSD_DOCS_REPO_REVISION'
+date: '$(date -u)'
+---
+EOF
+
 mkdir -p $BUILDTMP/out/overview
 (
 cd $BUILDTMP
 ./osd-doc-converter -f html5 \
     --template templates/doclibrary.html5 \
     --output out/overview/index.html \
-    osd-documentation/overview/pandoc-metadata.yaml \
-    osd-documentation/overview/overview.md
+    osd-documentation/overview/overview.md \
+    docprops.yaml \
+    osd-documentation/overview/pandoc-metadata.yaml
 
-# dont build the PDF version for now
-# maybe use PDFs from github releases in the future?
-#./osd-doc-converter -f pdf \
-#    --output out/overview/overview.pdf \
-#    osd-documentation/overview/pandoc-metadata.yaml \
-#    osd-documentation/overview/overview.md
+./osd-doc-converter -f pdf \
+    --output out/overview/overview.pdf \
+    osd-documentation/overview/overview.md \
+    docprops.yaml \
+    osd-documentation/overview/pandoc-metadata.yaml
 )
 
 cp -r $BUILDTMP/out/overview $DOCS_OUTDIR
 
 rm -rf "$BUILDTMP"
-
