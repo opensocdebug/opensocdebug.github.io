@@ -7,9 +7,9 @@ title: "Open System-on-Chip Debug (OSD) Overview"
   <hr/>
 
   <!-- document navigation sidebar -->
-    <div class="col-md-3">
+  <div class="col-md-3">
     <div data-spy="affix" data-offset-top="50" id="osd-docnav" class="osd-docnav">
-      <nav class="osd-docnav-nav nav hidden-print" role="complementary">
+            <nav class="osd-docnav-nav nav hidden-print" role="complementary">
         <ul>
         <li><a href="#introduction">Introduction</a><ul>
         <li><a href="#about-open-soc-debug">About Open SoC Debug</a></li>
@@ -61,9 +61,24 @@ title: "Open System-on-Chip Debug (OSD) Overview"
         </ul></li>
         </ul>
       </nav>
+      
+      <div class="osd-doc-sidebar-notes">
+        <p>
+          <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <a href="overview.pdf">PDF version</a> (good for offline reading and printing)
+        </p>
+
+        <p>
+          Found an error? <a href="/getinvolved">Contact us</a> or contribute to
+          this document directly on <a href="https://github.com/opensocdebug/documentation">GitHub</a>!
+        </p>
+
+        <p>
+          This document was generated from source revision f165e02 on Thu May 19 19:06:54 UTC 2016.
+        </p>
+      </div>
     </div>
   </div>
-  
+
   <!-- document content -->
   <div class="col-md-9">
     <h1 id="introduction">Introduction</h1>
@@ -160,7 +175,7 @@ title: "Open System-on-Chip Debug (OSD) Overview"
     <h2 id="osd-for-tracing">OSD for Tracing</h2>
     <p>Today’s debug system architectures strictly separate between run-control debugging and tracing. The example below shows how OSD units the two worlds with a common interface, thus reducing development and maintainance effort. Since most of the architecture is shared between run-control debugging and tracing, upgrading an existing design from run-control debugging to tracing is not a large step.</p>
     <figure>
-    <img src="img/overview_example_trace.png" title="An example system dual-core system using OSD tracing" alt="Figure 2: An example system using OSD for run-control debugging" id="fig:overview_example_trace" /><figcaption>Figure 2: An example system using OSD for run-control debugging</figcaption>
+    <img src="img/overview_example_trace.png" title="An example system dual-core system using OSD tracing" alt="Figure 2: An example system dual-core system using OSD tracing" id="fig:overview_example_trace" /><figcaption>Figure 2: An example system dual-core system using OSD tracing</figcaption>
     </figure>
     <p>Fig. 2 shows an example architecture of a OSD system with tracing support for a dual-core design. Most of the architecture is identical to the previous example: the host daemon, the HIM, the debug network and the SCM, CDM and MAM debug modules. New in this example are the following parts.</p>
     <ul>
