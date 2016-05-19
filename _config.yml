@@ -3,7 +3,7 @@ baseurl: ''
 
 # Dependencies
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 # Permalinks
 permalink: /blog/:year/:month/:day/:title/
