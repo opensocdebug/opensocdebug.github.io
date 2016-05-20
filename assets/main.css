@@ -1,22 +1,22 @@
 /* general styling */
 body {
-    padding-top: 50px;
-    font-family: 'Vollkorn', serif;
-    font-size: 16px;
-    line-height: normal;
-    color: #444444;
-    background-color: #FFFFFF;
+  padding-top: 50px;
+  font-family: 'Vollkorn', serif;
+  font-size: 16px;
+  line-height: normal;
+  color: #444444;
+  background-color: #FFFFFF;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 h1, h2, h3 {
@@ -68,60 +68,81 @@ footer {
 }
 
 .navbar-brand {
-    background: url("/images/logo_header.png") no-repeat scroll left center transparent;
-    display: inline-block;
-    font-size: 25px;
-    margin-left: 0;
-    padding-left: 55px;
+  background: url("/images/logo_header.png") no-repeat scroll left center transparent;
+  display: inline-block;
+  font-size: 25px;
+  margin-left: 0;
+  padding-left: 55px;
+}
+
+.navbar-toggle {
+  border-color: #AAAAAA;
+}
+.navbar-toggle .icon-bar {
+  background-color: #AAAAAA;
 }
 
 
 /* homepage */
 .headrow {
-    font-size: 0;
-    margin-top: 30px;
+  font-size: 0;
+  margin-top: 30px;
 }
 .headrow > * {
-    float: none;
-    display: inline-block;
-    font-size: 16px;
+  float: none;
+  display: inline-block;
+  font-size: 16px;
 }
 .headrow > *:last-child {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 .github-org {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin: 0.8em 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0.8em 0;
 }
 
+/* logo: default */
 .logo-container {
-    text-align: right;
-    margin-right: 4em;
+  text-align: right;
+  margin-right: 4em;
 }
 
 .logo {
-    width: 96px;
-    height: 96px;
-    display: inline-block;
-    background-size: cover;
+  width: 96px;
+  height: 96px;
+  display: inline-block;
+  background-size: cover;
+  background-image: url('/images/logo.png');
+}
+
+/* logo: small devices (single-column layout) */
+@media (max-width: 992px) {
+  .logo-container {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .logo {
+    display: none;
+  }
 }
 
 .osd-title h1 {
-    font-size: 2.8em;
-    margin-top: 0;
-    margin-bottom: 0;
+  font-size: 2.8em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .osd-tagline p {
-    font-size: 1.3em;
-    margin-bottom: 3em;
+  font-size: 1.3em;
+  margin-bottom: 3em;
 }
 
 .news {
-    margin-left: 0.5em;
-    display: block;
+  margin-left: 0.5em;
+  display: block;
 }
 
 /* DOCUMENTATION */
@@ -169,19 +190,19 @@ footer {
 }
 @media screen and (min-width: 992px) {
   .osd-docnav.affix-bottom, .osd-docnav.affix {
-      width: 213px;
+    width: 213px;
   }
   .osd-docnav.affix {
-      position: fixed;
-      top: 80px;
+    position: fixed;
+    top: 80px;
   }
   .osd-docnav.affix-bottom {
-      position: absolute;
+    position: absolute;
   }
 }
 @media screen and (min-width: 1200px) {
   .osd-docnav.affix-bottom, .osd-docnav.affix {
-      width: 262.5px;
+    width: 262.5px;
   }
 }
 
