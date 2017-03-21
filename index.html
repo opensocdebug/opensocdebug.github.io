@@ -26,7 +26,7 @@ title: "Open SoC Debug"
   <div class="col-md-6">
     <h2>News</h2>
     <ul class="fa-ul">
-      {% for post in site.posts %}
+      {% for post in site.posts limit:5 %}
       <li>
         {% if post.type == "slideshow" %}
         <i class="fa-li fa fa-desktop"></i>
