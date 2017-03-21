@@ -8,6 +8,8 @@ highlighter: rouge
 # Permalinks
 permalink: /blog/:year/:month/:day/:title/
 
+exclude: [vendor]
+
 # some defaults (avoid adding frontmatter to all files)
 defaults:
   -
@@ -27,7 +29,7 @@ defaults:
 authors:
   philipp:
     display_name: Philipp Wagner
-    picture: /img/people/philipp.jpg
+    picture: /images/philipp.jpg
   stefan:
     display_name: Stefan Wallentowitz
-    picture: /img/people/stefan.jpg
+    picture: /images/stefan.jpg

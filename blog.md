@@ -10,4 +10,9 @@ title: The Open SoC Debug Blog
   <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
   <p class="osc-blog-meta">by {{ site.authors[post.author].display_name }}, posted on {{ post.date | date_to_long_string }}
   <p>{{ post.excerpt }}</p>
+  <p>
+  {% if post.excerpt != post.content %}
+    <a href="{{ site.baseurl }}{{ post.url }}"><i class="fa fa-arrow-right"></i> Read more</a>
+  {% endif %}
+  </p>
 {% endfor %}

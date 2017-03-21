@@ -4,3 +4,5 @@
 # Ruby and bundler
 /.ruby-version
 /Gemfile.lock
+/.bundle
+/vendor

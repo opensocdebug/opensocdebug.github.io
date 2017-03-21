@@ -28,21 +28,3 @@ bundle exec jekyll serve
 
 Now you can point your web browser to the URL reported as "Server address" from the previous command, usually that is http://127.0.0.1:4000.
 
-### Update documentation
-The site contains a snapshot of the documentation around OSD, especially the specification documents.
-
-The conversion from Markdown to HTML (and PDF) is done in a docker container. See the [documentation](https://github.com/opensocdebug/opensocdebug-doc-converter/blob/master/README.md) for details. If you're on Ubuntu, running
-
-~~~
-sudo apt-get install docker.io
-~~~
-
-is sufficient.
-
-Now to update all documents from their corresponding sources, run
-
-~~~
-./build_docs.sh
-~~~
-
-Then review and commit all changes.
