@@ -11,20 +11,27 @@ Clone this repository from GitHub.
 git clone https://github.com/opensocdebug/opensocdebug.github.io.git
 ~~~
 
-### Setup
-The setup follows the [GitHub documentation](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/).
+## Development Setup
+To see the final page locally, you need to install Jekyll as described in the
+[GitHub documentation](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/).
 
-Execute all the following commands **inside the directory that contains this README.md file**!
-
-1. Ensure that you have Ruby 2.0.0 or higher installed. Check with `ruby --version`.
-   If you're using rbenv to switch between ruby versions, run `rbenv local 2`
-2. Install bundler: `gem install bundler`
-3. Download all dependencies: `bundle install`
-
-### Build the site locally
 ~~~
+# Install dependencies
+# for OpenSUSE
+sudo zypper install ruby2.5-devel zlib-devel ruby2.5-rubygem-bundler
+
+# for Ubuntu > 14.04 (Ruby > 2.0 is required)
+sudo apt-get install ruby-dev zlib1g-dev
+
+# Install Jekyll with all dependencies used by GitHub pages
+# (inside the directory where this README is)
+bundle install --path vendor/bundle
+
+# Build and continuously update site
 bundle exec jekyll serve
 ~~~
 
-Now you can point your web browser to the URL reported as "Server address" from the previous command, usually that is http://127.0.0.1:4000.
+You can now view the site in your browser at http://localhost:4000.
+It is constantly updated if you make changes to any of the source files
+(if you reload the page in your browser, of course).
 
